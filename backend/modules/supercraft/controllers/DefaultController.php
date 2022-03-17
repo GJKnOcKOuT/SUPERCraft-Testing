@@ -11,20 +11,21 @@
 
 namespace backend\modules\supercraft\controllers;
 
-use arter\amos\audit\components\web\Controller;
 use arter\amos\core\controllers\BaseController;
 use arter\amos\dashboard\controllers\TabDashboardControllerTrait;
 use yii\filters\AccessControl;
 use yii\filters\AccessRule;
 use yii\filters\VerbFilter;
+use backend\modules\tickets\models\Menu;
 
 
 /**
  * Class DefaultController
  * @package backend\modules\supercraft\controllers
  */
-class DefaultController extends Controller
+class DefaultController extends BaseController
 {
+    use TabDashboardControllerTrait;
 
     /**
      * @inheritdoc
@@ -63,6 +64,9 @@ class DefaultController extends Controller
      */
     public function init()
     {
+        $this->initDashboardTrait();
+        $this->setModelObj(new Menu());
+        parent::init();
         $this->setUpLayout('main');
     }
 
