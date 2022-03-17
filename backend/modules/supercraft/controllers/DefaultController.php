@@ -58,6 +58,14 @@ class DefaultController extends Controller
         ];
     }
 
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        $this->setUpLayout('main');
+    }
+
 
     /**
      * {@inheritdoc}
