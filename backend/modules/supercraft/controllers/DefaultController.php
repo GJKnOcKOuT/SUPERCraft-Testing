@@ -64,7 +64,6 @@ class DefaultController extends BaseController
      */
     public function init()
     {
-        $this->setUpLayout('main');
     }
 
     /**
@@ -72,7 +71,6 @@ class DefaultController extends BaseController
      */
     public function actions()
     {
-        $this->setUpLayout('main');
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
