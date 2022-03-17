@@ -64,10 +64,8 @@ class DefaultController extends BaseController
      */
     public function init()
     {
-        $this->initDashboardTrait();
-        $this->setModelObj(new ContactForm());
-        parent::init();
         $this->setUpLayout('main');
+        return $this->render('index');
     }
 
     /**
