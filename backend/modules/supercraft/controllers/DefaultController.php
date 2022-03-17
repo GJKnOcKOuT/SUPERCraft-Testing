@@ -16,7 +16,7 @@ use arter\amos\dashboard\controllers\TabDashboardControllerTrait;
 use yii\filters\AccessControl;
 use yii\filters\AccessRule;
 use yii\filters\VerbFilter;
-use backend\modules\tickets\models\Menu;
+use backend\modules\supercraft\models\Menu;
 
 
 /**
