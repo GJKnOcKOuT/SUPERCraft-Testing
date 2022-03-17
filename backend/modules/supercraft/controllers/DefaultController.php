@@ -22,7 +22,7 @@ use yii\filters\VerbFilter;
 
 /**
  * Class DefaultController
- * @package backend\modules\tickets\controllers
+ * @package backend\modules\supercraft\controllers
  */
 class DefaultController extends BaseController
 {
