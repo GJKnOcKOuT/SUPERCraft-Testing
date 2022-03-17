@@ -16,6 +16,7 @@ use arter\amos\dashboard\controllers\TabDashboardControllerTrait;
 use yii\filters\AccessControl;
 use yii\filters\AccessRule;
 use yii\filters\VerbFilter;
+use backend\modules\supercraft\models\ContactForm;
 
 
 /**
