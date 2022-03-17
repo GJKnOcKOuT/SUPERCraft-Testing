@@ -11,21 +11,20 @@
 
 namespace backend\modules\supercraft\controllers;
 
+use arter\amos\audit\components\web\Controller;
 use arter\amos\core\controllers\BaseController;
 use arter\amos\dashboard\controllers\TabDashboardControllerTrait;
 use yii\filters\AccessControl;
 use yii\filters\AccessRule;
 use yii\filters\VerbFilter;
-use backend\modules\supercraft\models\ContactForm;
 
 
 /**
  * Class DefaultController
  * @package backend\modules\supercraft\controllers
  */
-class DefaultController extends BaseController
+class DefaultController extends Controller
 {
-    use TabDashboardControllerTrait;
 
     /**
      * @inheritdoc
@@ -57,17 +56,6 @@ class DefaultController extends BaseController
                 ]
             ]
         ];
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function init()
-    {
-        $this->initDashboardTrait();
-        $this->setModelObj(new ContactForm());
-        parent::init();
-        $this->setUpLayout('main');
     }
 
 
