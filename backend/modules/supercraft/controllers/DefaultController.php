@@ -4,20 +4,19 @@
  * EROI - Emilia Romagna Open Innovation is based on:
  * https://www.open2.0.regione.lombardia.it
  *
- * @package    backend\modules\supercraft\controllers
+ * @package    backend\modules\tickets\controllers
  * @category   CategoryName
  * @author     Elite Division S.r.l.
  */
 
 namespace backend\modules\supercraft\controllers;
 
-use arter\amos\admin\models\UserProfile;
 use arter\amos\core\controllers\BaseController;
 use arter\amos\dashboard\controllers\TabDashboardControllerTrait;
-use Yii;
 use yii\filters\AccessControl;
 use yii\filters\AccessRule;
 use yii\filters\VerbFilter;
+
 
 /**
  * Class DefaultController
@@ -64,10 +63,15 @@ class DefaultController extends BaseController
      */
     public function init()
     {
+        $this->initDashboardTrait();
+        //$this->setModelObj(new ContactForm());
+        parent::init();
+        $this->setUpLayout('main');
     }
 
+
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function actions()
     {
@@ -77,12 +81,13 @@ class DefaultController extends BaseController
             ],
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
     }
 
     /**
-     * Displays contacts.
+     * Displays homepage.
      *
      * @return string
      */
@@ -90,4 +95,8 @@ class DefaultController extends BaseController
     {
         return $this->render('index');
     }
+
 }
+
+
+
