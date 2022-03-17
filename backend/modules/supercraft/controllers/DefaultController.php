@@ -93,6 +93,6 @@ class DefaultController extends BaseController
      */
     public function actionIndex()
     {
-        return $this->render('index.php');
+        return $this->render('index');
     }
 }

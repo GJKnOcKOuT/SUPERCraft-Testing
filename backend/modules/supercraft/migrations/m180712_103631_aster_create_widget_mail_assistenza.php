@@ -14,7 +14,7 @@ use yii\rbac\Permission;
 
 class m180712_103631_aster_create_widget_mail_assistenza  extends \arter\amos\core\migration\AmosMigrationWidgets
 {
-    const MODULE_NAME = 'supercraft';
+    const MODULE_NAME = 'tickets';
 
     /**
      * @inheritdoc
