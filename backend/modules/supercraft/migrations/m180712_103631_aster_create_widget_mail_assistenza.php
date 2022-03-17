@@ -4,7 +4,7 @@
  * EROI - Emilia Romagna Open Innovation is based on:
  * https://www.open2.0.regione.lombardia.it
  *
- * @package    backend\modules\tickets\migrations
+ * @package    backend\modules\supercraft\migrations
  * @category   CategoryName
  * @author     Elite Division S.r.l.
  */
@@ -23,7 +23,7 @@ class m180712_103631_aster_create_widget_mail_assistenza  extends \arter\amos\co
     {
         $this->widgets = [
             [
-                'classname' => \backend\modules\tickets\widgets\icons\WidgetIconAssistenza::className(),
+                'classname' => \backend\modules\supercraft\widgets\icons\WidgetIconAssistenza::className(),
                 'type' => \arter\amos\dashboard\models\AmosWidgets::TYPE_ICON,
                 'module' => self::MODULE_NAME,
                 'dashboard_visible' => 1,

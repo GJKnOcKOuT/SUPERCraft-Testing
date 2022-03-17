@@ -44,6 +44,9 @@ return [
             ]
         ]
     ],
+    'supercraft' => [
+        'class' => 'backend\modules\supercraft\Module'
+    ],
     'gridview' => [
         'class' => '\kartik\grid\Module'
     ],
