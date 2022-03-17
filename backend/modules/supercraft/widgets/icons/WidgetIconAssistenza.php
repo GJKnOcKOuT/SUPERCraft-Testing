@@ -4,12 +4,12 @@
  * EROI - Emilia Romagna Open Innovation is based on:
  * https://www.open2.0.regione.lombardia.it
  *
- * @package    backend\modules\tickets\widgets\icons
+ * @package    backend\modules\supercraft\widgets\icons
  * @category   CategoryName
  * @author     Elite Division S.r.l.
  */
 
-namespace backend\modules\tickets\widgets\icons;
+namespace backend\modules\supercraft\widgets\icons;
 
 use arter\amos\core\icons\AmosIcons;
 use arter\amos\core\widget\WidgetIcon;
@@ -27,7 +27,7 @@ class WidgetIconAssistenza extends WidgetIcon {
         $this->setIconFramework(AmosIcons::AM);
         $this->setIcon('email');
         
-        $this->setUrl(Yii::$app->urlManager->createUrl(['/tickets']));
+        $this->setUrl(Yii::$app->urlManager->createUrl(['/supercraft']));
         $this->setCode('ASSISTENZA');
         $this->setModuleName('Assistenza');
         $this->setNamespace(__CLASS__);

@@ -80,6 +80,9 @@ if (isset($modules['tag'])) {
     if (isset($modules['sondaggi'])) {
         $modules['tag']['modelsEnabled'][] = 'arter\amos\sondaggi\models\Sondaggi';
     }
+    if (isset($modules['supercraft'])) {
+        $modules['tag']['modelsEnabled'][] = 'backend\modules\supercraft';
+    }
 }
 
 if (isset($modules['report'])) {
@@ -99,6 +102,9 @@ if (isset($modules['report'])) {
     if (isset($modules['partnershipprofiles'])) {
         $modules['report']['modelsEnabled'][] = 'backend\modules\aster_partnership_profiles\models\PartnershipProfiles';
     }
+    if (isset($modules['supercraft'])) {
+        $modules['tag']['modelsEnabled'][] = 'backend\modules\supercraft';
+    }
 }
 
 if (isset($modules['comments'])) {
@@ -115,6 +121,9 @@ if (isset($modules['comments'])) {
     if (isset($modules['news'])) {
         $modules['comments']['modelsEnabled'][] = 'arter\amos\news\models\News';
     }
+    if (isset($modules['supercraft'])) {
+        $modules['tag']['modelsEnabled'][] = 'backend\modules\supercraft';
+    }
 }
 
 if (isset($modules['favorites'])) {
@@ -127,6 +136,9 @@ if (isset($modules['favorites'])) {
     }
     if (isset($modules['news'])) {
         $modules['favorites']['modelsEnabled'][] = 'arter\amos\news\models\News';
+    }
+    if (isset($modules['supercraft'])) {
+        $modules['tag']['modelsEnabled'][] = 'backend\modules\supercraft';
     }
 }
 

@@ -4,14 +4,13 @@
  * EROI - Emilia Romagna Open Innovation is based on:
  * https://www.open2.0.regione.lombardia.it
  *
- * @package    backend\modules\tickets\controllers
+ * @package    backend\modules\supercraft\controllers
  * @category   CategoryName
  * @author     Elite Division S.r.l.
  */
 
-namespace backend\modules\tickets\controllers;
+namespace backend\modules\supercaft\controllers;
 
-use backend\modules\tickets\models\ContactForm;
 use arter\amos\admin\models\UserProfile;
 use arter\amos\core\controllers\BaseController;
 use arter\amos\dashboard\controllers\TabDashboardControllerTrait;
@@ -92,20 +91,8 @@ class DefaultController extends BaseController
      *
      * @return string
      */
-    public function actionIndex($layout = NULL)
+    public function actionIndex()
     {
-        $modelProfile = UserProfile::findOne(['user_id' => Yii::$app->user->id]);
-        $modelForm = new ContactForm();
-        if ($modelForm->load(Yii::$app->request->post()) && $modelForm->validate()) {
-            if ($modelForm->spedisciEmailStandard($modelProfile)) {
-                Yii::$app->session->addFlash('success', 'Grazie per averci contattato. Vi risponderemo appena possibile.');
-            } else {
-                Yii::$app->session->addFlash('error', 'C\'è stato un\'errore nell\'invio dell\'email.');
-            }
-            return $this->refresh();
-        } else {
-            $this->setUpLayout('form');
-            return $this->render('contacts', ['modelForm' => $modelForm, 'modelProfile' => $modelProfile]);
-        }
+        return $this->render('index.php');
     }
 }
