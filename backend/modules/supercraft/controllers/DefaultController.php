@@ -9,7 +9,7 @@
  * @author     Elite Division S.r.l.
  */
 
-namespace backend\modules\supercaft\controllers;
+namespace backend\modules\supercraft\controllers;
 
 use arter\amos\admin\models\UserProfile;
 use arter\amos\core\controllers\BaseController;
