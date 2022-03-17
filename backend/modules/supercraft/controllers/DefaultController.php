@@ -65,7 +65,6 @@ class DefaultController extends BaseController
     public function init()
     {
         $this->setUpLayout('main');
-        return $this->render('index');
     }
 
     /**
